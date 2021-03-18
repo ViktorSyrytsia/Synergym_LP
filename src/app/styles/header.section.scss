@@ -1,0 +1,57 @@
+@import "../../styles.scss";
+
+.header {
+  background-color: $primary-gray;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  @include nav-font-mobile;
+
+  @include for-size(laptop) {
+    height: 66px;
+    @include nav-font;
+  }
+  &__logo {
+    cursor: pointer;
+    padding-left: 20px;
+
+    @include for-size(laptop) {
+      padding-left: 35px;
+    }
+    & > img {
+      width: 75px;
+      padding-top: 3px;
+
+      @include for-size(laptop) {
+        width: 90px;
+        padding-top: 6px;
+      }
+    }
+  }
+  &__navigation {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    height: 25px;
+    &-item {
+      cursor: pointer;
+      padding: 0px 20px;
+
+      @include for-size(laptop) {
+        padding: 0px 25px;
+      }
+      &:first-child {
+        flex-grow: 1;
+        visibility: hidden;
+
+        @include for-size(laptop) {
+          visibility: visible;
+          padding-left: 45px;
+        }
+      }
+      &:nth-child(2) {
+        border-right: 1px solid #8F9399;
+      }
+    }
+  }
+}

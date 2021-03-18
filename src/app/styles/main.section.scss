@@ -1,0 +1,52 @@
+@import "../../styles.scss";
+
+.main {
+  height: 765px;
+  background: url("../../assets/main_bg.png") 25% 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+
+  @include for-size(laptop) {
+    background: url("../../assets/main_bg.png");
+    background-size: cover;
+  }
+  &__logo {
+    padding-top: 92px;
+    &> img {
+      width: 150px;
+    }
+  }
+  &__subtitle {
+    margin: 25px auto;
+    width: 325px;
+    @include subheader-font-mobile;
+    color: $bg-dark-gray;
+
+    @include for-size(laptop) {
+      width: 560px;
+      @include subheader-font;
+    }
+  }
+  &__start {
+    margin: 305px auto 20px auto;
+    & > button {
+      width: 325px;
+      height: 40px;
+      border-radius: 30px;
+      background-color: $primary-green;
+      @include buttons-font;
+      cursor: pointer;
+
+      @include for-size(laptop) {
+        width: 280px;
+      }
+    }
+  }
+  &__login {
+    cursor: pointer;
+    @include nav-font;
+    color: $bg-dark-gray ;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,89 @@
+//Fonts mixin
+
+@mixin nav-font {
+  font-family: $heading-font-family;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  line-height: 24px;
+  color: #D9E2ED;
+}
+@mixin nav-font-mobile {
+  font-family: $heading-font-family;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  line-height: 18px;
+  color: #D9E2ED;
+}
+
+@mixin subheader-font {
+  font-family: $body-font-family;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+@mixin subheader-font-mobile {
+  font-family: $body-font-family;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 28px;
+}
+
+@mixin header-font {
+  font-family: $heading-font-family;
+  font-weight: 600;
+  font-size: 36px;
+  letter-spacing: 0.5px;
+  line-height: 48px;
+  color: #454545;
+}
+
+@mixin header-font-mobile {
+  font-family: $heading-font-family;
+  font-weight: 600;
+  font-size: 26px;
+  letter-spacing: 0.5px;
+  line-height: 48px;
+  color: #454545;
+}
+
+@mixin title-font {
+  font-family: $heading-font-family;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.7px;
+  line-height: 24px;
+  color: #8F9399;
+  text-transform: uppercase;
+}
+
+@mixin title-font-mobile {
+  font-family: $heading-font-family;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.7px;
+  line-height: 24px;
+  color: #8F9399;
+  text-transform: uppercase;
+}
+
+@mixin buttons-font {
+  font-family: $heading-font-family;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: $white;
+  text-transform: uppercase;
+}
+
+//Media mixin
+
+@mixin for-size($size) {
+  @if $size==laptop {
+    @media screen and (min-width: 1025px) and (max-width: 1980px) and (-webkit-min-device-pixel-ratio: 1) {
+      @content;
+    }
+  }
+}

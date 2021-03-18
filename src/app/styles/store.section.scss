@@ -1,0 +1,91 @@
+@import '../../styles.scss';
+
+.store {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: $bg-dark-gray;
+
+  @include for-size(laptop) {
+    justify-content: center;
+    flex-direction: row;
+    text-align: start;
+  }
+  &__container {
+
+    @include for-size(laptop) {
+      margin-bottom: 80px;
+    }
+    &:nth-child(1) {
+      margin-top: 55px;
+
+      @include for-size(laptop) {
+        margin-top: 134px;
+      }
+    }
+    &:nth-child(2) {
+
+      @include for-size(laptop) {
+        margin-left: 166px;
+      }
+    }
+    &-icon {
+      & > img {
+      }
+      margin-bottom: 30px;
+    }
+    &-title {
+      @include title-font-mobile;
+      margin-bottom: 10px;
+
+      @include for-size(laptop) {
+        @include title-font
+      }
+    }
+    &-header {
+      @include header-font-mobile;
+      width: 325px;
+      margin: 0 auto;
+
+      @include for-size(laptop) {
+        @include header-font;
+        width: 404px;
+      }
+    }
+    &-subheader {
+      @include subheader-font-mobile;
+      color: $secondary-gray;
+      width: 325px;
+      margin: 16px auto 30px auto;
+
+      @include for-size(laptop) {
+        @include subheader-font;
+        width: 370px;
+        margin: 18px 0 54px 0;
+      }
+    }
+    &-providers {
+      & > img {
+        width: 321px;
+      }
+    }
+     &-phone {
+      margin: 68px auto 70px auto;
+      height: 490px;
+      width: 245px;
+      background: url('../../assets/phone_mobile.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @include for-size(laptop) {
+        height: 540px;
+        width: 270px;
+        margin: 80px auto auto auto;
+        background: url('../../assets/phone.png');
+        background-size: cover;
+
+      }
+     }
+  }
+
+}
